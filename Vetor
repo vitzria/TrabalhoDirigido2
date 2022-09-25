@@ -1,0 +1,32 @@
+import java.util.*;
+public class Vetor {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int  N, i, par=0, impar=0, pos=0, neg=0, neutro=0;
+		System.out.println("Digite a quantidade de elementos do vetor: ");
+		N = ler.nextInt();
+		int[] vetor = new int[N];
+		for(i=0;i<N;i++){
+			System.out.printf("Digite o valor %d" , (i+1));
+			vetor[i] = ler.nextInt();
+		}
+		for(i=0;i<N;i++){
+			if(vetor[i] %2==0)
+				par++;
+			if(vetor[i] %2!=0)
+				impar++;
+			if(vetor[i]>0)
+				pos++;
+			if(vetor[i]<0)
+				neg++;
+			if(vetor[i]==0)
+				neutro++;
+		}
+		System.out.println(par);
+		System.out.println(impar);
+		System.out.println(pos);
+		System.out.println(neg);
+		System.out.println(neutro);
+	}
+}
