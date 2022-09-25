@@ -1,0 +1,25 @@
+import java.util.*;
+public class VetorAleat {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int N, maior=0, i;
+		System.out.println("Digite o tamanho do vetor: ");
+		N = ler.nextInt();
+		Random random = new Random();
+		int[] vetor = new int [N];
+		
+		for(i=0;i<N;i++){
+			vetor[i]=random.nextInt();
+			System.out.println(vetor[i]);
+		}
+		
+		for(i=0;i<N;i++){
+			if(vetor[i]>=maior){
+				maior=vetor[i];
+			}
+		}
+		System.out.println("Maior:" +maior);
+	}
+
+}
