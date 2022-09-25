@@ -1,0 +1,31 @@
+import java.util.*;
+public class Desvio {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int N, i, soma=0, media=0, sub, x;
+		float soma2=0, div, s;
+		System.out.println("Digite o tamanho do vetor: ");
+		N = ler.nextInt();
+		int[] vetor = new int[N];
+		
+		for(i=0;i<N;i++){
+			System.out.printf("Digite o numero %d: " , i+1);
+			vetor[i] = ler.nextInt();
+		}
+		for(i=0;i<N;i++){
+			soma+=vetor[i];
+			media=soma/N;
+		}
+		for(i=0;i<N;i++){
+			sub=vetor[i]-media;
+			x= (int)Math.pow(sub, 2);
+			System.out.println("(" + vetor[i] + "-" + media + ")" + "²" + "=" + x);
+			soma2+=x;
+		}
+		div = soma2/(N-1);
+		s=(float)Math.sqrt(div);
+		System.out.println("S=" + s);
+	}
+
+}
