@@ -1,0 +1,43 @@
+import java.util.*;
+public class Calculadora {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		float N1, N2, soma, sub, mul, div;
+		char sinal;
+		System.out.println("\nCALCULADORA\n");
+		System.out.println("\nDigite a operação: ");
+		N1=ler.nextFloat();
+		sinal=ler.next().charAt(0);
+		N2=ler.nextFloat();
+		
+		switch(sinal){
+			case '+':
+				soma=N1+N2;
+				System.out.println(soma);
+				break;
+			case '-':
+				sub=N1-N2;
+				System.out.println(sub);
+				break;
+			case '*':
+				mul=N1*N2;
+				System.out.println(mul);
+				break;
+			case '/':
+				if(N2==0){
+					System.out.println("Divissao impossivel");
+					break;
+				}
+				else{
+				div=N1/N2;
+				System.out.println(div);
+				}
+			default:
+				System.out.println("Operador invalido");
+				break;
+		}
+		ler.close();
+		}
+
+	}
