@@ -1,0 +1,19 @@
+import java.util.*;
+public class SenhaA {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		String senha;
+		System.out.println("Digite a senha: ");
+		senha=ler.nextLine();
+		do{
+			System.out.println("Senha incorreta! Tente novamente: ");
+			senha=ler.nextLine();
+			}while(senha.compareTo("a76dk09")!=0);
+		if(senha.compareTo("a76dk09")==0){
+			System.out.println("Acesso permitido");
+		}
+		ler.close();
+	}
+
+}
