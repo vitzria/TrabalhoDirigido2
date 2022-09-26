@@ -1,0 +1,38 @@
+import java.util.*;
+public class Despertador {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		int h1, m1, h2=0, m2=0, h3, m3, tempo;
+		System.out.println("Digite o horario atual: ");
+		h1 = ler.nextInt();
+		m1 = ler.nextInt();
+		if(h1<0 && h1>=24 && m1<0 && m1>=60){
+			System.out.println("Horario invalido");
+			System.exit(0);
+		}
+		else{
+			System.out.println("Digite o horario do alarme: ");
+			h2 = ler.nextInt();
+			m2 = ler.nextInt();
+		}
+		
+		h3 = h2 - h1;
+		m3 = m2 - m1;
+		
+		if(m3<0){
+			h3--;
+			m3+=60;
+		}
+		if(h3<0){
+			h3 = h3+24;
+			h3=h3*60;
+		}
+		else{
+			h3=h3*60;
+		}
+		tempo = h3 + m3;
+		System.out.println(tempo);
+		ler.close();
+	}
+}
